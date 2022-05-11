@@ -14,38 +14,40 @@ body {
   place-items: center;
 }
 .container {
-  width: 60rem;
+  width: 100%;
   height: 40rem;
-  background: rgb(88, 179, 253) url(https://pngimage.net/wp-content/uploads/2018/06/road-side-png-.png);
+  background: rgb(88, 179, 253)
+    url(https://pngimage.net/wp-content/uploads/2018/06/road-side-png-.png);
   background-repeat: repeat-x;
   background-size: cover;
   animation-name: bg-anim;
   animation-duration: 2s;
   animation-timing-function: linear;
   animation-iteration-count: infinite;
-  position:0 100% ;
-
+  position: 0 100%;
 }
 @keyframes bg-anim {
   0% {
     background-position: 0 100%;
+    height: 41rem;
+  }
+  50% {
+    height: 40rem;
   }
   100% {
     background-position: 50rem 100%;
+    height: 42rem;
   }
 }
 
 .bicycle {
   width: 41.25rem;
   height: 30rem;
-  background-color: rgba(0,0,0,0);
+  background-color: rgba(0, 0, 0, 0);
   position: relative;
   top: 4rem;
-  left: 10rem;
-
+  margin: auto;
 }
-
-
 
 .wheal {
   width: 15rem;
@@ -60,20 +62,20 @@ body {
   animation-name: wheal-anim;
   animation-duration: 10s;
   animation-timing-function: linear;
-  animation-iteration-count: infinite; 
+  animation-iteration-count: infinite;
 }
 
-@keyframes wheal-anim  {
+@keyframes wheal-anim {
   0% {
     transform: rotateZ(0);
   }
   100% {
     transform: rotateZ(-360deg);
   }
-  } 
-  .bicycle div {
-    position: absolute;
-  }
+}
+.bicycle div {
+  position: absolute;
+}
 
 .wheal::after {
   content: '';
@@ -88,7 +90,7 @@ body {
   animation-name: light;
   animation-duration: 1s;
   animation-timing-function: linear;
-  animation-iteration-count: infinite; 
+  animation-iteration-count: infinite;
 }
 @keyframes light {
   0% {
@@ -217,7 +219,7 @@ body {
 .seat-tube::after {
   content: '';
   width: 1.75rem;
-  height: .725rem;
+  height: 0.725rem;
   position: absolute;
   background-color: #000;
   top: -1.5rem;
@@ -254,10 +256,10 @@ body {
   animation-name: wheal-anim;
   animation-duration: 10s;
   animation-timing-function: linear;
-  animation-iteration-count: infinite; 
+  animation-iteration-count: infinite;
 }
 .padals {
-  width: .75rem;
+  width: 0.75rem;
   height: 8.5rem;
   background-color: #000;
   top: 18.5rem;
@@ -267,17 +269,17 @@ body {
   animation-name: wheal-anim;
   animation-duration: 10s;
   animation-timing-function: linear;
-  animation-iteration-count: infinite; 
+  animation-iteration-count: infinite;
 }
 .padals::after,
 .padals::before {
   content: '';
   width: 2.5rem;
-  height: .85rem;
+  height: 0.85rem;
   background-color: #000;
   position: absolute;
-  left: -.9rem;
-  border-radius: 0.3rem ;
+  left: -0.9rem;
+  border-radius: 0.3rem;
   animation-name: wheal-anim;
   animation-duration: 10s;
   animation-timing-function: linear;
@@ -285,10 +287,10 @@ body {
   animation-direction: reverse;
 }
 .padals::after {
-    bottom: 0.1rem;
+  bottom: 0.1rem;
 }
 .padals::before {
-  top: 0.1re
+  top: 0.1re;
 }
 .chain {
   width: 15.4rem;
@@ -299,4 +301,3 @@ body {
   border-radius: 2.5rem 50% 50% 2.5rem;
   z-index: 10;
 }
-
