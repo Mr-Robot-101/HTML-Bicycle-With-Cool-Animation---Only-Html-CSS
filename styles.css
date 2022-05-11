@@ -1,0 +1,302 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+*html {
+  font-size: 62.5%;
+}
+body {
+  width: 100%;
+  height: 100vh;
+  display: grid;
+  place-items: center;
+}
+.container {
+  width: 60rem;
+  height: 40rem;
+  background: rgb(88, 179, 253) url(https://pngimage.net/wp-content/uploads/2018/06/road-side-png-.png);
+  background-repeat: repeat-x;
+  background-size: cover;
+  animation-name: bg-anim;
+  animation-duration: 2s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  position:0 100% ;
+
+}
+@keyframes bg-anim {
+  0% {
+    background-position: 0 100%;
+  }
+  100% {
+    background-position: 50rem 100%;
+  }
+}
+
+.bicycle {
+  width: 41.25rem;
+  height: 30rem;
+  background-color: rgba(0,0,0,0);
+  position: relative;
+  top: 4rem;
+  left: 10rem;
+
+}
+
+
+
+.wheal {
+  width: 15rem;
+  aspect-ratio: 1;
+  background-color: black;
+  border-radius: 50%;
+  border: 0.25rem dashed black;
+  background-clip: content-box;
+  bottom: 0;
+  display: grid;
+  place-items: center;
+  animation-name: wheal-anim;
+  animation-duration: 10s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite; 
+}
+
+@keyframes wheal-anim  {
+  0% {
+    transform: rotateZ(0);
+  }
+  100% {
+    transform: rotateZ(-360deg);
+  }
+  } 
+  .bicycle div {
+    position: absolute;
+  }
+
+.wheal::after {
+  content: '';
+  width: 12rem;
+  aspect-ratio: 1;
+  position: absolute;
+  border-radius: 50%;
+  border: 4.2rem solid #ddd;
+  box-sizing: border-box;
+  display: grid;
+  place-items: center;
+  animation-name: light;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite; 
+}
+@keyframes light {
+  0% {
+    border: 4.2rem solid rgb(231, 5, 5);
+  }
+  50% {
+    border: 4.2rem solid rgb(0, 225, 255);
+  }
+  100% {
+    border: 4.2rem solid rgb(247, 124, 9);
+  }
+}
+
+.wheal-back {
+  right: 0;
+}
+.front-fork {
+  width: 1.5rem;
+  height: 8.5rem;
+  background-color: #000;
+  bottom: 7.5rem;
+  left: 8.5rem;
+  transform: rotateZ(20deg);
+  transform-origin: left bottom;
+}
+.front-fork::before {
+  content: '';
+  width: 1rem;
+  height: 2.5rem;
+  background-color: black;
+  bottom: 0;
+  left: 0.25rem;
+  transform: rotateZ(30deg) translateX(-1rem);
+  position: absolute;
+}
+.tube {
+  width: 1rem;
+  height: 6rem;
+  background-color: black;
+  left: 0.25rem;
+  top: -6rem;
+}
+.tube::before {
+  content: '';
+  width: 1.5rem;
+  height: 1.5rem;
+  background-color: black;
+  position: absolute;
+  left: -0.25rem;
+  top: 0.5rem;
+}
+.handelbers {
+  width: 4rem;
+  height: 1rem;
+  background-color: black;
+  top: 9rem;
+  left: 9.5rem;
+  transform: rotateZ(15deg);
+  perspective: 50rem;
+}
+.handelbers::before {
+  content: '';
+  width: 2rem;
+  aspect-ratio: 1;
+  background-color: #000;
+  position: absolute;
+  top: -0.5rem;
+  left: -0.5rem;
+  border-radius: 50%;
+}
+.handelbers::after {
+  content: '';
+  width: 15rem;
+  height: 1rem;
+  background-color: black;
+  position: absolute;
+  left: -7.75rem;
+  transform: rotateY(-70deg);
+  border-radius: 2rem;
+}
+.crossbar {
+  width: 13.5rem;
+  height: 1.75rem;
+  background-color: black;
+  top: 11rem;
+  left: 13rem;
+  transform: rotateZ(20deg);
+  transform-origin: left top;
+  border-radius: 0 50% 50% 0;
+}
+.frame-1 {
+  width: 16rem;
+  height: 1.75rem;
+  background-color: black;
+  top: 12.5rem;
+  left: 13rem;
+  transform: rotateZ(45deg);
+  transform-origin: left top;
+  border-radius: 0 50% 50% 0;
+}
+.frame-2 {
+  width: 12rem;
+  height: 1rem;
+  background-color: #000;
+  top: 22rem;
+  left: 22.5rem;
+  z-index: 10;
+}
+.seat-tube {
+  width: 1.5rem;
+  height: 9.25rem;
+  background-color: #000;
+  top: 15rem;
+  left: 23.5rem;
+  transform: rotateZ(15deg);
+}
+.seat-tube::before {
+  content: '';
+  width: 1rem;
+  height: 5.5rem;
+  position: absolute;
+  background-color: #000;
+  top: -5.5rem;
+  left: 0.25rem;
+}
+.seat-tube::after {
+  content: '';
+  width: 1.75rem;
+  height: .725rem;
+  position: absolute;
+  background-color: #000;
+  top: -1.5rem;
+  left: 0.125rem;
+}
+.seat {
+  width: 6rem;
+  height: 1.5rem;
+  background-color: black;
+  top: -6rem;
+  left: -3rem;
+  transform-origin: ;
+  transform: rotateZ(-12deg);
+  border-radius: 20% 1rem 1rem 80%;
+}
+.back-fork {
+  width: 1rem;
+  height: 12rem;
+  background-color: #000;
+  left: 29rem;
+  top: 14rem;
+  transform: rotateZ(-55deg);
+  z-index: 10;
+}
+.crank {
+  width: 5rem;
+  height: 5rem;
+  background-color: #000;
+  top: 20rem;
+  left: 20rem;
+  border-radius: 50%;
+  border: 0.15rem dashed black;
+  background-clip: content-box;
+  animation-name: wheal-anim;
+  animation-duration: 10s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite; 
+}
+.padals {
+  width: .75rem;
+  height: 8.5rem;
+  background-color: #000;
+  top: 18.5rem;
+  left: 22rem;
+  transform: rotateZ(-12deg);
+  border-radius: 0.5rem;
+  animation-name: wheal-anim;
+  animation-duration: 10s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite; 
+}
+.padals::after,
+.padals::before {
+  content: '';
+  width: 2.5rem;
+  height: .85rem;
+  background-color: #000;
+  position: absolute;
+  left: -.9rem;
+  border-radius: 0.3rem ;
+  animation-name: wheal-anim;
+  animation-duration: 10s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: reverse;
+}
+.padals::after {
+    bottom: 0.1rem;
+}
+.padals::before {
+  top: 0.1re
+}
+.chain {
+  width: 15.4rem;
+  height: 4.25rem;
+  border: 0.25rem solid #000;
+  top: 20.5rem;
+  left: 20.25rem;
+  border-radius: 2.5rem 50% 50% 2.5rem;
+  z-index: 10;
+}
+
